@@ -1,0 +1,7 @@
+<!------------------------The Collatz Sequence----------------->
+<!--------------Task---------->
+Create a function called Collatz that accepts just one argument called number. If that number is an even number(number%2==0) return the floored division of that number(number//2) if the number is an odd number(number%2 != 0) return 3 * number + 1.
+Then create a function called collatz_sequence that keeps calling the collatz function and creates a Sequence until the last term of the Sequence is One.
+
+<!--------collatz_sequence Function------------->
+Problem: Keep calling collatz and keep returning its result until it's output is One.

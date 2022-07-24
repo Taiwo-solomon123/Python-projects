@@ -1,0 +1,16 @@
+Python program to guess a secret number that the computer has picked from a range of number at random. If the guess of the user is too low or too high we use inform the user that its too low, too high or out of range.
+    The player has limited number of trials to gess the secret number.
+    OPERATIONS
+    ==>The computer picks a random number from a given range.
+        ==> The user passes a lower bound and upper bound of the range
+    ==>We Try to guess the random number within the given trials
+        ==>If the user guesses a wrong number:
+            ==>We inform the user that its too low, too high or out of range.
+            ==>We return the number of trials left.
+            ==>If the player guesses it incorrectly on the last trial:
+                ==>We return a sorry message
+                ==>We return the right answer
+        ==>If the user guesses right:
+            ==>We congrat the user
+            ==>Return the number of times the user tried before guessing the right answer.
+    ==>We ask the user if he wants a to play again

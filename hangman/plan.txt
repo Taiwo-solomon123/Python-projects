@@ -1,0 +1,54 @@
+<!--------------------------------HANGMAN--------------------------->
+<!----Functions---->
+==> Hanging_man: it takes trials as an index to print the hanging_man drawing at every trial
+==> Play: This is where all of the operations take place
+==> secret_word: This returns the secret_word and will be assigned to the word variable in the Play Function
+==> main Function to run the program
+
+
+<!---The Play Function--->
+==> dashes variable: same length as word
+==> trials variable: this is the the number of lifes a user has and it would be passed into the hanging_man function as index.
+==> secret_word variable: the secret_word function is assigned
+==> guessed_letters variable: to store list of all previously guessed letters
+==> guessed_words: to store list of all previously guessed words
+==> guessed variable: this will take a False value to indicate that the word has not been guessed... when the word is guessed the value is set to False.
+==> While not guessed and trials 6
+    ==> Asks the user to guess a word or a char in the secret_word
+    ==> if len(guess)==1 and guess.isalpha():
+        ==> if guess not in guessed_letters:
+            ==> guessed_letters.append(guess)
+            ==> if guess in word:
+                ==> print("you guessed correctly", guess, "is in the word")
+                ==> dashes_as_list=list(dashes)
+                ==> indices= [i for i, letter in enumerate(dashes_as_list) if letter==guess]
+                ==> for index in indices:
+                    ==> dashes_as_list[index]=guess
+                ==> dashes=" ".join(dashes_as_list)
+                ==> print(dashes)
+                ==> if "_" not in dashes:
+                    ==> print("You guessed the secret_word ", secret_word," correctly")
+                    ==> dashes=True
+            ==> elif guess not in word:
+                ==> print("Wrong guess", guess, "not in word")
+                ==> trials-=1
+        ==> elif guess in guessed_letters:
+            ==> print("You already guessed", guess)
+    ==> elif len(guess)==len(word) and guess.isalpha():
+        ==> if word not in guessed_words:
+            ==> guessed_words.append(guess)
+            ==> if word==secret_word:
+                ==> print("Hurray, You guessed the secret_word ", secret_word," correctly")
+                ==> dashes=True
+            ==> elif word != secret_word:
+                ==> print("Wrong guess")
+                ==> trials-=1
+        ==> elif guess in guessed_words:
+            ==> print("You already guessed", guess)
+    ==> else:
+        ==> print("sorry you entered a wrong input")
+    hanging_man(trials)
+
+
+
+

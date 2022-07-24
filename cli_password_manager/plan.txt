@@ -1,0 +1,8 @@
+<!----------CLI PASSWORD MANAGER-------------->
+<!-------OPERATIONS-------->
+add: add new password to database
+del: delete an existing password from database
+edit: edit an existing password in database
+show: show all password in database
+get: retrive a password from database
+
